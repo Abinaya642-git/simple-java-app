@@ -10,6 +10,16 @@
     <artifactId>simple-java-app</artifactId>
     <version>1.0</version>
 
+    <!-- ✅ ADD THIS SECTION (Dependencies) -->
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
     <!-- Build Configuration -->
     <build>
         <plugins>
@@ -23,6 +33,16 @@
                 <configuration>
                     <source>17</source>
                     <target>17</target>
+                </configuration>
+            </plugin>
+
+            <!-- ✅ ADD THIS (JUnit Runner Plugin) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <useModulePath>false</useModulePath>
                 </configuration>
             </plugin>
 
